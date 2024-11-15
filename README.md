@@ -1,1 +1,1 @@
-# TryHackMe-OWASP-Top-10---2021
+# TryHackMe-OWASP-Top-10
