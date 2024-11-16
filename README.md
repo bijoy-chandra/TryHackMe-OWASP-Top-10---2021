@@ -1,7 +1,8 @@
 # TryHackMe-OWASP-Top-10
 
 ## Broken Access Control
+Nothing Special was there, read an article about Broken Access Control how it works.
 
+![Broken access control](https://github.com/user-attachments/assets/3e1ec8bf-14cb-453e-a733-fb2e9181475a)
 
-![image](https://github.com/user-attachments/assets/c74a0b03-d368-4b88-9925-def48a93db1d)
 
