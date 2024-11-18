@@ -5,6 +5,28 @@ Nothing Special was there, read an article about Broken Access Control how it wo
 
 ![Broken access control](https://github.com/user-attachments/assets/3e1ec8bf-14cb-453e-a733-fb2e9181475a)
 
+## Broken Access Control (IDOR Challenge)
+
+#### Deploy the machine and go to http://10.10.134.128 - Login with the username being noot and the password test1234.
+- Ans: flag{fivefourthree} 
+- Method: Edit the note=0
+
+![image](https://github.com/user-attachments/assets/f799b170-7a9a-42cf-a7d6-b6c8013d708f)
+
+## Security Misconfigarations
+
+#### Hack into the webapp, and find the flag!
+-Ans: 
+
+The Web app looks like this and we tried default common password "admin:admin", but that dosen't work at all. So i search into the google and find default password for pensive notes in the Github.
+
+![image](https://github.com/user-attachments/assets/07164e08-c2e6-4860-91ce-41cc156330ae)
+
+![image](https://github.com/user-attachments/assets/3aa7623f-2592-4da6-aa07-c0470a5e6159)
+
+![image](https://github.com/user-attachments/assets/14ee6eb2-e570-4349-bd76-d856921447cd)
+
+
 ## Cryptographic Failures
 
 #### What is the name of the mentioned directory?
@@ -79,6 +101,42 @@ Nothing Special was there, read an article about Broken Access Control how it wo
 - Ans: THM{Just_a_tiny_misconfiguration}
 
 ![image](https://github.com/user-attachments/assets/4e516742-8e3b-421d-bf9e-2a36110f695a)
+
+## Cross Site Scripting (XSS)
+
+#### Navigate to http://MACHINE_IP/ in your browser and click on the "Reflected XSS" tab on the navbar; craft a reflected XSS payload that will cause a popup saying "Hello".
+- payload: <script>alert("Hello")</script>
+- Ans: ThereIsMoreToXSSThanYouThink
+
+![image](https://github.com/user-attachments/assets/91f12b86-d2ce-4857-88f1-9e1ce6da0f12)
+
+#### On the same reflective page, craft a reflected XSS payload that will cause a popup with your machines IP address.
+- Ans: ReflectiveXss4TheWin
+
+![image](https://github.com/user-attachments/assets/0913320e-ea44-4b5e-b3e8-972b5badd7ae)
+
+
+#### Now navigate to http://MACHINE_IP/ in your browser and click on the "Stored XSS" tab on the navbar; make an account.
+Then add a comment and see if you can insert some of your own HTML.
+- Payload: <span>I am a hacker</span>
+- Ans: HTML_T4gs
+
+![image](https://github.com/user-attachments/assets/5ae3efe9-b134-4c71-93e7-e8054966e46f)
+
+
+#### On the same page, create an alert popup box appear on the page with your document cookies.
+- Payment: <script>alert(document.cookie)</script>
+- Ans: W3LL_D0N3_LVL2
+
+![image](https://github.com/user-attachments/assets/e3e60e7c-7171-4446-ac5f-87afc903a878)
+
+
+#### Change "XSS Playground" to "I am a hacker" by adding a comment and using Javascript.
+- Payload: <script>document.querySelector('#thm-title').textContent="I am a hacker"</script>
+- Ans: websites_can_be_easily_defaced_with_xss
+
+![image](https://github.com/user-attachments/assets/e9288f05-d247-4472-b75e-9ccff24fc3d4)
+
 
 ## Vulnerable and Outdated Components
 
